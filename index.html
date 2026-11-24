@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Product Management System</h1>
+        <p>Using Binary Search Tree (BST)</p>
+    </header>
+
+    <div class="container">
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Stock</h3>
+                <p id="totalStock">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Value</h3>
+                <p id="totalValue">₹0</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Add New Product</h2>
+
+            <form id="productForm">
+                <input type="number" id="productId" placeholder="Product ID" required>
+                <input type="text" id="productName" placeholder="Product Name" required>
+                <input type="text" id="category" placeholder="Category" required>
+                <input type="number" id="price" placeholder="Price" min="0" required>
+                <input type="number" id="quantity" placeholder="Quantity" min="0" required>
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Search Product</h2>
+            <div class="search-box">
+                <input type="number" id="searchId" placeholder="Enter Product ID">
+                <button onclick="searchProduct()">Search</button>
+            </div>
+            <div id="searchResult"></div>
+        </section>
+
+        <section class="panel">
+            <h2>Product List</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTable"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>BST Traversal</h2>
+            <div class="traversal-buttons">
+                <button onclick="showTraversal('inorder')">Inorder</button>
+                <button onclick="showTraversal('preorder')">Preorder</button>
+                <button onclick="showTraversal('postorder')">Postorder</button>
+            </div>
+            <div id="traversalResult"></div>
+        </section>
+
+        <section class="panel">
+            <h2>Binary Search Tree Structure</h2>
+            <div id="treeDisplay"></div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Product Management System | Data Structures Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
